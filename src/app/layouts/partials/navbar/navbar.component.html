@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img [src]="['images/logo2.png']" alt="logo">
+    </a>
+    <button class="navbar-toggler" (click)="toggleCanvasMenu()">
+      <span class="bi bi-list"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle">Ecosystem
+            <ul class="dropdown-menu">
+              <li>
+                <a [routerLink]="['/merchants']" class="dropdown-item">Merchants</a>
+              </li>
+              <li>
+                <a [routerLink]="['/individuals']" class="dropdown-item">Individuals</a>
+              </li>
+              <li>
+                <a [routerLink]="['/cooperatives']" class="dropdown-item">Cooperatives</a>
+              </li>
+              <li>
+                <a [routerLink]="['/card-issuers']" class="dropdown-item">Card Issuers</a>
+              </li>
+              <li>
+                <a [routerLink]="['/governments']" class="dropdown-item">Governments</a>
+              </li>
+            </ul>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/faq']">FAQ</a>
+        </li>
+        <li class="nav-item account-nav-link">
+          <a class="nav-link account-link">Account</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="canvas-menu d-flex align-items-end flex-column" [class.open]="isCanvasMenuOpen">
+  <button class="btn-close" aria-label="close" type="button" (click)="toggleCanvasMenu()"></button>
+
+  <div class="logo">
+    <img [src]="['images/logo2.png']" alt="logo" width="60">
+  </div>
+  <nav>
+    <ul class="vertical-menu">
+      <li class=""><a [routerLink]="['/']" class="">Home</a></li>
+      <li *ngFor="let item of menuItems; let i = index" [class.openmenu]="openSubmenuIndex === i">
+        <a href="#" class="">{{ item.title }}</a>
+        <span class="switch" (click)="toggleSubmenu(i)">
+          <i class="bi bi-chevron-down"></i>
+        </span>
+        <ul class="submenu" *ngIf="item.submenu.length > 0" [style.display]="openSubmenuIndex === i ? 'block' : 'none'">
+          <li class="" *ngFor="let subItem of item.submenu"><a [routerLink]="subItem.url" class="">{{ subItem.title }}</a></li>
+        </ul>
+      </li>
+      <li class=""><a [routerLink]="['/about']" class="">About</a></li>
+      <li class=""><a [routerLink]="['/faq']" class="">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100 d-flex gap-3">
+    <li class="list-inline-item">
+      <a href="#">
+        <span><i class="bi bi-facebook"></i></span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#">
+        <span><i class="bi bi-twitter"></i>
+        </span></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#">
+        <span><i class="bi bi-linkedin"></i></span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#">
+        <span><i class="bi bi-instagram"></i></span>
+      </a>
+    </li>
+  </ul>
+</div>
