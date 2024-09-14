@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-governments',
+  selector: 'governments',
   standalone: true,
   imports: [],
   templateUrl: './governments.component.html',
-  styleUrl: './governments.component.css'
 })
 export class GovernmentsComponent {
 
