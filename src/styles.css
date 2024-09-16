@@ -10,7 +10,7 @@ body{
   background: #f4f7fa;
   color: #141F25;
   font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
   font-smooth: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   line-height: 1.5;
 }
 h1, h2, h3, h4, h5 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--primary-color);
 }
 section img {
@@ -109,7 +109,7 @@ img {
   font-weight: 700 !important;
   font-size: var(--font-size-lg) !important;
   margin: 1rem 0 !important;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 section {
   padding: 3rem 0 !important;
@@ -131,7 +131,7 @@ button {
 }
 .navbar .navbar-nav .nav-item a {
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--purple-color) !important;
 }
 nav button.navbar-toggler {
@@ -594,7 +594,7 @@ nav button.navbar-toggler span {
 }
 
 #open-account .open-account-card.home-page h3 {
-  margin-left: -6rem !important;
+  margin-left: -4rem !important;
 }
 #open-account .open-account-card p {
   font-size: var(--font-size-base);
