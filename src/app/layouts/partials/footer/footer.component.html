@@ -1,4 +1,4 @@
-<footer class="text-center " style="background-color: #e8f0ff">
+<footer class="text-center " style="background-color: #e8f0ff; margin-top: -4rem !important;">
   <!-- Grid container -->
   <div class="container">
     <!-- Section: Links -->
@@ -8,7 +8,7 @@
         <!-- Grid column -->
         <div class="col-md-2">
           <h6 class="text-uppercase font-weight-bold">
-            <a routerLink="/about" class=" bounce-up animation-element">About</a>
+            <a routerLink="#" class=" bounce-up animation-element">About</a>
           </h6>
         </div>
         <!-- Grid column -->
@@ -16,7 +16,7 @@
         <!-- Grid column -->
         <div class="col-md-2">
           <h6 class="text-uppercase font-weight-bold">
-            <a routerLink="/faq"  class=" bounce-up animation-element">Contact</a>
+            <a [routerLink]="['/contact']"  class=" bounce-up animation-element">Contact</a>
           </h6>
         </div>
         <!-- Grid column -->
@@ -24,7 +24,7 @@
         <!-- Grid column -->
         <div class="col-md-2">
           <h6 class="text-uppercase font-weight-bold">
-            <a href="#!" class=" bounce-up animation-element">Privacy Policy</a>
+            <a [routerLink]="['/privacy-policy']" class=" bounce-up animation-element">Privacy Policy</a>
           </h6>
         </div>
         <!-- Grid column -->
@@ -32,7 +32,7 @@
         <!-- Grid column -->
         <div class="col-md-2">
           <h6 class="text-uppercase font-weight-bold">
-            <a href="#!" class=" bounce-up animation-element">Terms</a>
+            <a [routerLink]="['/terms-conditions']" class=" bounce-up animation-element">Terms</a>
           </h6>
         </div>
         <!-- Grid column -->

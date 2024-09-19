@@ -49,6 +49,16 @@ export const routes: Route[] = [
         path: 'impact',
         loadComponent: () => import('../../pages/public/impact/impact.component').then(m => m.ImpactComponent),
         title: 'Impact'
+      },
+      {
+        path: 'terms-conditions',
+        loadComponent: () => import('../../pages/public/terms-conditions/terms-conditions.component').then(m => m.TermsConditionsComponent),
+        title: 'Terms and Conditions'
+      },
+      {
+        path: 'privacy-policy',
+        loadComponent: () => import('../../pages/public/privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent),
+        title: 'Privacy Policy'
       }
     ]
   }
