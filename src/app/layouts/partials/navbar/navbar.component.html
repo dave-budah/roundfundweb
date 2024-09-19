@@ -8,6 +8,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']">Home</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle">Ecosystem
             <ul class="dropdown-menu">
@@ -61,8 +64,8 @@
           <li class="" *ngFor="let subItem of item.submenu"><a [routerLink]="subItem.url" class="">{{ subItem.title }}</a></li>
         </ul>
       </li>
-      <li class=""><a [routerLink]="['/impact']" class="">About</a></li>
-      <li class=""><a [routerLink]="['/contact']" class="">FAQ</a></li>
+      <li class=""><a [routerLink]="['/impact']" class="">Impact</a></li>
+      <li class=""><a [routerLink]="['/contact']" class="">Contact</a></li>
     </ul>
   </nav>
 
