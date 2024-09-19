@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'faq',
+  selector: 'contact',
   standalone: true,
   imports: [],
-  templateUrl: './faq.component.html',
+  templateUrl: './contact.component.html',
 })
-export class FaqComponent {
+export class ContactComponent {
 
 }

@@ -9,7 +9,7 @@ body{
   margin: 0;
   background: #f4f7fa;
   color: #141F25;
-  font-size: 18px;
+  font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
   font-smooth: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,11 +27,10 @@ body{
   --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
   /*  Colors */
-  --night-blue: #151B54;
+  --purple-color: #512efd;
   --deep-sea-blue: #123456;
   --primary-color: #11212D;
   --off-white: #f3f3f3;
-  --purple-color: #643cf5;
   --round-orange: #ff176c;
 }
 /* For Webkit browsers */
@@ -106,7 +105,7 @@ img {
   object-fit: cover;
 }
 .section-title {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   font-size: var(--font-size-lg) !important;
   margin: 1rem 0 !important;
   font-family: "Inter", sans-serif;
@@ -121,7 +120,7 @@ button {
   color: inherit !important;
 }
 .navbar {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
   height: 80px;
   z-index: 999;
   background: #e8f0ff;
@@ -479,7 +478,7 @@ nav button.navbar-toggler span {
 }
 .app-store-links a i {
   font-size: 2rem;
-  color: var(--night-blue) !important;
+  color: var(--purple-color) !important;
 }
 #hero .hero-img {
   position: relative;
@@ -561,7 +560,7 @@ nav button.navbar-toggler span {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: var(--night-blue);
+  background: var(--purple-color);
 }
 #nuggets .nugget-icon i {
   color: var(--off-white);
@@ -594,7 +593,7 @@ nav button.navbar-toggler span {
 }
 
 #open-account .open-account-card.home-page h3 {
-  margin-left: -4rem !important;
+
 }
 #open-account .open-account-card p {
   font-size: var(--font-size-base);
@@ -623,7 +622,7 @@ nav button.navbar-toggler span {
   margin: 2rem auto;
 }
 .send-money-card.card-b {
-  background: #2ca6ff;
+  background: var(--purple-color);
 }
 .send-money-card {
   background: #e4eeff;
@@ -665,7 +664,7 @@ nav button.navbar-toggler span {
 /* Features */
 #features {
   padding: 4rem 0;
-  background: #e8f0ff;
+  background: linear-gradient(90deg, #d3ecd4, #d1c1ee);
 }
 .grid-box-sm {
   position: relative;
@@ -673,7 +672,7 @@ nav button.navbar-toggler span {
   max-width: 420px;
   height: 420px;
   border-radius: 25px;
-  background: #2ca6ff;
+  background: var(--purple-color);
   margin: 4rem 0;
 }
 .grid-box-text {
@@ -928,7 +927,7 @@ a:hover, a:focus {
   flex-direction: column;
 }
 .round-money-card.card-b {
-  background: #2ca6ff;
+  background: var(--purple-color);
 }
 .send-money-card.card-a {
   background: #e4eeff;
@@ -944,7 +943,7 @@ a:hover, a:focus {
   box-shadow: 0 1px 4px rgba(204, 197, 185, 0.5);
 }
 .round-money-card .info-card.blue-bg {
-  background: #2ca6ff;
+  background: var(--purple-color);
 }
 .round-money-card .info-card.grey-bg {
   background: #e4eeff;
@@ -957,8 +956,47 @@ a:hover, a:focus {
   font-size: var(--font-size-base);
   color: var(--off-white);
 }
-
-/* Animation Styling */
+.feature-card {
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  min-height: 180px;
+  padding: 1rem;
+}
+.feature-card h4 {
+  font-size: var(--font-size-md);
+}
+section#contact {
+  margin-top: 4rem;
+  padding: 4rem 0;
+}
+section#contact ul li {
+  margin-bottom: 1rem !important;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-form {
+  padding: 1rem 0;
+}
+.contact-form input,
+.contact-form textarea {
+  background: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid var(--purple-color);
+}
+.contact-form button {
+  background: var(--purple-color) !important;
+  color: #ebebeb !important;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  padding: 8px;
+  margin-top: 1.5rem;
+}
+.contact-form button:hover {
+  opacity: 0.8;
+}
+  /* Animation Styling */
 .bounce-up {
   opacity: 0;
   -moz-transition: all 700ms ease-out;

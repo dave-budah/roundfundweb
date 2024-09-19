@@ -1,12 +1,12 @@
 import {Component, ElementRef, HostListener, inject, Renderer2} from '@angular/core';
 
 @Component({
-  selector: 'about',
+  selector: 'impact',
   standalone: true,
   imports: [],
-  templateUrl: './about.component.html',
+  templateUrl: './impact.component.html',
 })
-export class AboutComponent {
+export class ImpactComponent {
   renderer = inject(Renderer2)
   el = inject(ElementRef)
   private animationElements!: NodeListOf<Element>

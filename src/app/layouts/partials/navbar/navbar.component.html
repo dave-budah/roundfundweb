@@ -30,13 +30,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/about']">About</a>
+          <a class="nav-link" [routerLink]="['/impact']">Impact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/faq']">FAQ</a>
+          <a class="nav-link" [routerLink]="['/contact']">Contact</a>
         </li>
         <li class="nav-item account-nav-link">
-          <a class="nav-link account-link">Account</a>
+          <a class="nav-link account-link">Merchants</a>
         </li>
       </ul>
     </div>
@@ -61,8 +61,8 @@
           <li class="" *ngFor="let subItem of item.submenu"><a [routerLink]="subItem.url" class="">{{ subItem.title }}</a></li>
         </ul>
       </li>
-      <li class=""><a [routerLink]="['/about']" class="">About</a></li>
-      <li class=""><a [routerLink]="['/faq']" class="">FAQ</a></li>
+      <li class=""><a [routerLink]="['/impact']" class="">About</a></li>
+      <li class=""><a [routerLink]="['/contact']" class="">FAQ</a></li>
     </ul>
   </nav>
 

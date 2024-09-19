@@ -36,12 +36,12 @@ export const routes: Route[] = [
         loadComponent: () => import('../../pages/public/governments/governments.component').then(m => m.GovernmentsComponent),
       },
       {
-        path: 'faq',
-        loadComponent: () => import('../../pages/public/faq/faq.component').then(m => m.FaqComponent),
+        path: 'contact',
+        loadComponent: () => import('../../pages/public/contact/contact.component').then(m => m.ContactComponent),
       },
       {
-        path: 'about',
-        loadComponent: () => import('../../pages/public/about/about.component').then(m => m.AboutComponent),
+        path: 'impact',
+        loadComponent: () => import('../../pages/public/impact/impact.component').then(m => m.ImpactComponent),
       }
     ]
   }
