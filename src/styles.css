@@ -761,7 +761,7 @@ nav button.navbar-toggler span {
   justify-content: center;
   margin: 1rem auto;
   flex-direction: column;
-  height: 40svh;
+  min-height: 40svh;
 }
 .hero-grid .col-b img {
   width: 100%;
