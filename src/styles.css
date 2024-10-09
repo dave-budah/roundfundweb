@@ -925,6 +925,9 @@ section#contact ul li {
 .contact-form {
   padding: 1rem 0;
 }
+.contact-form input {
+  height: 44px;
+}
 .contact-form input,
 .contact-form textarea {
   background: none !important;
