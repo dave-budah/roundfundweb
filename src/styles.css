@@ -942,6 +942,10 @@ section#contact ul li {
   transition: all 0.2s ease-in-out;
   padding: 8px;
   margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
 }
 .contact-form button:hover {
   opacity: 0.8;
