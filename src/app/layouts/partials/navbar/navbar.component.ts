@@ -22,6 +22,11 @@ export class NavbarComponent {
     this.isCanvasMenuOpen = !this.isCanvasMenuOpen;
   }
 
+  closeCanvasMenu() {
+    this.isCanvasMenuOpen = false;
+  }
+
+
   // Toggle submenu
   toggleSubmenu(index: number) {
     if (this.openSubmenuIndex === index) {

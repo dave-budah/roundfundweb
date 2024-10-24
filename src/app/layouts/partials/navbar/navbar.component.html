@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img [src]="['images/logo2.png']" alt="logo">
+      <img [src]="['images/logo.png']" alt="logo">
     </a>
     <button class="navbar-toggler" (click)="toggleCanvasMenu()">
       <span class="bi bi-list"></span>
@@ -50,22 +50,24 @@
   <button class="btn-close" aria-label="close" type="button" (click)="toggleCanvasMenu()"></button>
 
   <div class="logo">
-    <img [src]="['images/logo2.png']" alt="logo" width="60">
+    <img [src]="['images/logo.png']" alt="logo" width="60">
   </div>
   <nav>
     <ul class="vertical-menu">
-      <li class=""><a [routerLink]="['/']" class="">Home</a></li>
+      <li class=""><a [routerLink]="['/']" class="" (click)="closeCanvasMenu()">Home</a></li>
       <li *ngFor="let item of menuItems; let i = index" [class.openmenu]="openSubmenuIndex === i">
         <a href="#" class="">{{ item.title }}</a>
         <span class="switch" (click)="toggleSubmenu(i)">
           <i class="bi bi-chevron-down"></i>
         </span>
         <ul class="submenu" *ngIf="item.submenu.length > 0" [style.display]="openSubmenuIndex === i ? 'block' : 'none'">
-          <li class="" *ngFor="let subItem of item.submenu"><a [routerLink]="subItem.url" class="">{{ subItem.title }}</a></li>
+          <li class="" *ngFor="let subItem of item.submenu">
+            <a [routerLink]="subItem.url" class="" (click)="closeCanvasMenu()">{{ subItem.title }}</a>
+          </li>
         </ul>
       </li>
-      <li class=""><a [routerLink]="['/impact']" class="">Impact</a></li>
-      <li class=""><a [routerLink]="['/contact']" class="">Contact</a></li>
+      <li class=""><a [routerLink]="['/impact']" class="" (click)="closeCanvasMenu()">Impact</a></li>
+      <li class=""><a [routerLink]="['/contact']" class="" (click)="closeCanvasMenu()">Contact</a></li>
     </ul>
   </nav>
 
@@ -76,17 +78,17 @@
       </a>
     </li>
     <li class="list-inline-item">
-      <a href="#">
+      <a href="#" target="_blank">
         <span><i class="bi bi-twitter"></i>
         </span></a>
     </li>
     <li class="list-inline-item">
-      <a href="#">
+      <a href="#" target="_blank">
         <span><i class="bi bi-linkedin"></i></span>
       </a>
     </li>
     <li class="list-inline-item">
-      <a href="#">
+      <a href="#" target="_blank">
         <span><i class="bi bi-instagram"></i></span>
       </a>
     </li>

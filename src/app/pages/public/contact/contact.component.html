@@ -31,16 +31,16 @@
         </ul>
       </div>
       <div class="col-md-6">
-        <form class="contact-form">
+        <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <h3 class="mb-3 fw-bold">Leave us a message</h3>
           <div class="mb-3">
-            <input type="text" class="form-control" id="email" placeholder="Email">
+            <input type="text" class="form-control" formControlName="name" id="name" placeholder="Name">
           </div>
           <div class="mb-3">
-            <input type="text" class="form-control" id="name" placeholder="Name">
+            <input type="text" class="form-control" formControlName="email" id="email" placeholder="Email">
           </div>
           <div class="mb-3">
-            <textarea class="form-control" id="message" rows="4" placeholder="Message"></textarea>
+            <textarea class="form-control" formControlName="message" id="message" rows="4" placeholder="Message"></textarea>
           </div>
           <div class="message-submit">
             <button class="btn w-25">
