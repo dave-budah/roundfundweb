@@ -26,11 +26,14 @@ body{
   --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
   /*  Colors */
-  --purple-color: #512efd;
+  --yellow-color: #eeb013;
   --deep-sea-blue: #123456;
-  --primary-color: #11212D;
+  --primary-color: #000003;
   --off-white: #f3f3f3;
-  --round-orange: #ff176c;
+  --lite-yellow: #FEF9EC;
+}
+svg {
+  fill: var(--yellow-color) !important;
 }
 /* For Webkit browsers */
 ::-webkit-scrollbar {
@@ -50,6 +53,12 @@ main,
 section,
 article {
   container-type: inline-size;
+}
+footer a {
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: var(--yellow-color) !important;
 }
 .section-padding {
   padding: 4rem 0;
@@ -123,16 +132,16 @@ button {
   box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
   height: 80px;
   z-index: 999;
-  background: #e8f0ff;
+  background: var(--lite-yellow);
   padding-top: 0 !important;
 }
 .navbar .navbar-brand img {
-  width: 70px;
+  width: 100px;
 }
 .navbar .navbar-nav .nav-item a {
   font-weight: 500;
   font-family: "Inter", sans-serif;
-  color: var(--purple-color) !important;
+  color: var(--yellow-color) !important;
 }
 nav button.navbar-toggler {
   border: none !important;
@@ -141,7 +150,7 @@ nav button.navbar-toggler {
 }
 nav button.navbar-toggler span {
   font-size: 1.6rem;
-  color: var(--purple-color) !important;
+  color: var(--yellow-color) !important;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -170,7 +179,7 @@ nav button.navbar-toggler span {
   transition: width 0.3s ease;
 }
 .navbar .navbar-nav .nav-link:hover {
-  color: var(--round-orange) !important;
+  color: var(--primary-color) !important;
 }
 .navbar .navbar-nav .nav-link.sign-in-link::after,
 .navbar .navbar-nav .nav-link.signup-link::after {
@@ -188,7 +197,7 @@ nav button.navbar-toggler span {
   position: absolute;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, var(--purple-color) 0%, var(--round-orange) 100%);
+  background: linear-gradient(to right, var(--yellow-color) 0%, #fbecc6 100%);
   left: 0;
   bottom: 0;
   transition: width 0.3s ease;
@@ -198,7 +207,7 @@ nav button.navbar-toggler span {
   position: absolute;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, var(--purple-color) 0%, var(--round-orange) 100%);
+  background: linear-gradient(to right, var(--yellow-color) 0%, #fbecc6 100%);
   left: 0;
   bottom: 0;
   transition: width 0.3s ease;
@@ -276,7 +285,7 @@ nav button.navbar-toggler span {
   background-image: linear-gradient(to right, #fff 0%, transparent 100%);
 }
 .dropdown-item:focus .dropdown-item:hover {
-  color:  var(--purple-color);
+  color:  var(--yellow-color);
   background-image: linear-gradient(to right, #fff 99%, rgba(255, 255, 255, .9));
 }
 .dropdown-divider {
@@ -328,7 +337,7 @@ nav button.navbar-toggler span {
 
 /********* Canvas menu **********/
 .canvas-menu {
-  background: #e8f0ff;
+  background: var(--lite-yellow);
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -355,7 +364,7 @@ nav button.navbar-toggler span {
   height: 1em;
   position: absolute;
   padding: .25em;
-  color: var(--purple-color) !important;
+  color: var(--yellow-color) !important;
   opacity: .4;
   right: 30px;
   top: 20px;
@@ -415,7 +424,7 @@ nav button.navbar-toggler span {
   background: linear-gradient(to right, #ebebeb 0%, transparent 100%);
 }
 .canvas-menu .vertical-menu li.active a {
-  color: var(--purple-color);
+  color: var(--yellow-color);
 }
 .canvas-menu .vertical-menu li.active .submenu a {
   color: #79889e;
@@ -442,7 +451,7 @@ nav button.navbar-toggler span {
   padding: 5px !important;
   line-height: 1;
   cursor: pointer;
-  color: var(--purple-color);
+  color: var(--yellow-color);
   position: absolute;
   top: 0;
   right: 0;
@@ -450,7 +459,7 @@ nav button.navbar-toggler span {
   transition: all .2s ease-in-out;
 }
 #hero {
-  background: #e8f0ff;
+  background: var(--lite-yellow);
   padding-top: 8rem !important;
 }
 #hero h1 {
@@ -477,13 +486,13 @@ nav button.navbar-toggler span {
 }
 .app-store-links a i {
   font-size: 2rem;
-  color: var(--purple-color) !important;
+  color: var(--yellow-color) !important;
 }
-#hero .hero-img {
-  position: relative;
-}
+
 #hero .hero-img {
   margin-top: 1rem;
+  position: relative;
+  max-width: 500px;
 }
 
 /* Card styling */
@@ -500,8 +509,8 @@ nav button.navbar-toggler span {
   max-width: 380px;
   height: 15rem;
   width: 100%;
-  top: 50%;
-  right: -15%;
+  top: 60%;
+  right: -50%;
 }
 .debit-card header,
 .debit-card .logo {
@@ -548,7 +557,7 @@ nav button.navbar-toggler span {
   text-align: center;
 }
 #open-account .open-account-card {
-  background: var(--purple-color);
+  background: var(--yellow-color);
   border-radius: 25px;
   margin-top: 4rem;
   color: var(--off-white);
@@ -588,7 +597,7 @@ nav button.navbar-toggler span {
   height: 320px;
   margin: 2rem auto;
 }
-.round-money-card {
+.zano-money-card {
   border-radius: 25px;
   padding: 2rem;
   position: relative;
@@ -596,7 +605,7 @@ nav button.navbar-toggler span {
   margin: 2rem auto;
 }
 .send-money-card.card-b {
-  background: var(--purple-color);
+  background: var(--yellow-color);
 }
 .send-money-card {
   background: #e4eeff;
@@ -638,7 +647,7 @@ nav button.navbar-toggler span {
 /* Features */
 #features {
   padding: 4rem 0;
-  background: linear-gradient(90deg, #d3ecd4, #d1c1ee);
+  background: linear-gradient(90deg, var(--lite-yellow), #F8DFA0);
 }
 .grid-box-sm {
   position: relative;
@@ -646,7 +655,7 @@ nav button.navbar-toggler span {
   max-width: 420px;
   height: 420px;
   border-radius: 25px;
-  background: var(--purple-color);
+  background: var(--yellow-color);
   margin: 4rem 0;
 }
 .grid-box-text {
@@ -739,7 +748,7 @@ nav button.navbar-toggler span {
     overflow: hidden;
   }
   .grid-box {
-    min-height: 40svh;
+    min-height: 30svh;
   }
   .info-card {
     bottom: -5rem;
@@ -778,7 +787,7 @@ nav button.navbar-toggler span {
 }
 
 
-.mid-section .round-money-card {
+.mid-section .zano-money-card {
   border-radius: 25px;
   padding: 2rem;
   height: 280px;
@@ -787,7 +796,7 @@ nav button.navbar-toggler span {
   display: flex;
   justify-content: center;
   align-items: start;
-  background: #e8f0ff;
+  background: var(--lite-yellow);
   flex-direction: column;
 }
 .card {
@@ -828,6 +837,7 @@ h6, .h6 {
   font-weight: 600;
   text-transform: uppercase;
 }
+
 .card .description {
   font-size: 16px;
   color: #66615b;
@@ -854,13 +864,13 @@ a:hover, a:focus {
   object-fit: cover;
 }
 .make-payment .section-wrapper {
-  background: #e8f0ff;
+  background: var(--lite-yellow);
   border-radius: 15px;
   width: 100%;
   min-height: 50svh;
   padding: 20px;
 }
-.round-money-card {
+.zano-money-card {
   border-radius: 25px;
   padding: 2rem;
   position: relative;
@@ -870,16 +880,16 @@ a:hover, a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #e8f0ff;
+  background: var(--lite-yellow);
   flex-direction: column;
 }
-.round-money-card.card-b {
-  background: var(--purple-color);
+.zano-money-card.card-b {
+  background: var(--yellow-color);
 }
 .send-money-card.card-a {
   background: #e4eeff;
 }
-.round-money-card .info-card {
+.zano-money-card .info-card {
   position: absolute;
   left: 2rem;
   top: -3rem;
@@ -889,10 +899,10 @@ a:hover, a:focus {
   place-content: center;
   box-shadow: 0 1px 4px rgba(204, 197, 185, 0.5);
 }
-.round-money-card .info-card.blue-bg {
-  background: var(--purple-color);
+.zano-money-card .info-card.blue-bg {
+  background: var(--yellow-color);
 }
-.round-money-card .info-card.grey-bg {
+.zano-money-card .info-card.grey-bg {
   background: #e4eeff;
 }
 .faq-title {
@@ -933,10 +943,10 @@ section#contact ul li {
   background: none !important;
   outline: none !important;
   box-shadow: none !important;
-  border: 1px solid var(--purple-color);
+  border: 1px solid var(--yellow-color);
 }
 .contact-form button {
-  background: var(--purple-color) !important;
+  background: var(--yellow-color) !important;
   color: #ebebeb !important;
   border-radius: 4px;
   transition: all 0.2s ease-in-out;
@@ -947,6 +957,9 @@ section#contact ul li {
   align-items: center;
   gap: .5rem;
 }
+.contact-form button svg {
+  fill: var(--off-white) !important;
+}
 .contact-form button:hover {
   opacity: 0.8;
 }
@@ -956,29 +969,4 @@ li.list-group-item  {
 }
 li.list-group-item h3 {
   font-size: var(--font-size-base);
-}
-  /* Animation Styling */
-.bounce-up {
-  opacity: 0;
-  -moz-transition: all 700ms ease-out;
-  -webkit-transition: all 700ms ease-out;
-  -o-transition: all 700ms ease-out;
-  transition: all 700ms ease-out;
-  -moz-transform: translate3d(0px, 200px, 0px);
-  -webkit-transform: translate3d(0px, 200px, 0px);
-  -o-transform: translate(0px, 200px);
-  -ms-transform: translate(0px, 200px);
-  transform: translate3d(0px, 200, 0px);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.bounce-up.in-view {
-  opacity: 1;
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
 }
