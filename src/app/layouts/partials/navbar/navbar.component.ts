@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 import {NgFor, NgIf} from "@angular/common";
 
 @Component({
@@ -8,7 +8,8 @@ import {NgFor, NgIf} from "@angular/common";
   imports: [
     RouterLink,
     NgFor,
-    NgIf
+    NgIf,
+    RouterLinkActive
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'

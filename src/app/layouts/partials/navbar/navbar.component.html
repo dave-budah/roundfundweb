@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" [routerLink]="['/']">
-      <img [src]="['images/zano-black-text.png']" alt="logo">
+      <img [src]="['images/logo.png']" alt="logo">
     </a>
     <button class="navbar-toggler" (click)="toggleCanvasMenu()">
       <span class="bi bi-list"></span>
@@ -9,34 +9,34 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/']">Home</a>
+          <a class="nav-link" [routerLink]="['/home']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle">Ecosystem
             <ul class="dropdown-menu">
               <li>
-                <a [routerLink]="['/merchants']" class="dropdown-item">Merchants</a>
+                <a [routerLink]="['/merchants']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">Merchants</a>
               </li>
               <li>
-                <a [routerLink]="['/individuals']" class="dropdown-item">Individuals</a>
+                <a [routerLink]="['/individuals']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">Individuals</a>
               </li>
               <li>
-                <a [routerLink]="['/cooperatives']" class="dropdown-item">Cooperatives</a>
+                <a [routerLink]="['/cooperatives']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">Cooperatives</a>
               </li>
               <li>
-                <a [routerLink]="['/card-issuers']" class="dropdown-item">Card Issuers</a>
+                <a [routerLink]="['/card-issuers']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">Card Issuers</a>
               </li>
               <li>
-                <a [routerLink]="['/governments']" class="dropdown-item">Governments</a>
+                <a [routerLink]="['/governments']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">Governments</a>
               </li>
             </ul>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/impact']">Impact</a>
+          <a class="nav-link" [routerLink]="['/impact']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Impact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+          <a class="nav-link" [routerLink]="['/contact']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Contact</a>
         </li>
         <li class="nav-item account-nav-link">
           <a class="nav-link account-link">Merchants</a>
@@ -50,7 +50,7 @@
   <button class="btn-close" aria-label="close" type="button" (click)="toggleCanvasMenu()"></button>
 
   <div class="logo">
-    <img [src]="['images/zano-black-circle.png']" alt="logo" width="60">
+    <img [src]="['images/logo.png']" alt="logo" width="60">
   </div>
   <nav>
     <ul class="vertical-menu">
@@ -66,8 +66,8 @@
           </li>
         </ul>
       </li>
-      <li class=""><a [routerLink]="['/impact']" class="" (click)="closeCanvasMenu()">Impact</a></li>
-      <li class=""><a [routerLink]="['/contact']" class="" (click)="closeCanvasMenu()">Contact</a></li>
+      <li class=""><a [routerLink]="['/impact']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="" (click)="closeCanvasMenu()">Impact</a></li>
+      <li class=""><a [routerLink]="['/contact']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="" (click)="closeCanvasMenu()">Contact</a></li>
     </ul>
   </nav>
 

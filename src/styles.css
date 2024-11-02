@@ -26,14 +26,15 @@ body{
   --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
   /*  Colors */
-  --yellow-color: #eeb013;
+  --yellow-color: #f0b114;
   --deep-sea-blue: #123456;
   --primary-color: #000003;
   --off-white: #f3f3f3;
   --lite-yellow: #FEF9EC;
+  --zano-pink: #ff186b;
 }
 svg {
-  fill: var(--yellow-color) !important;
+  fill: var(--zano-pink) !important;
 }
 /* For Webkit browsers */
 ::-webkit-scrollbar {
@@ -58,7 +59,7 @@ footer a {
   transition: color 0.3s ease;
 }
 footer a:hover {
-  color: var(--yellow-color) !important;
+  color: var(--zano-pink) !important;
 }
 .section-padding {
   padding: 4rem 0;
@@ -163,7 +164,7 @@ nav button.navbar-toggler span {
   transition: color 0.3s ease;
 }
 .navbar .account-nav-link {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--zano-pink);
   border-radius: 25px;
   max-width: 250px;
   cursor: pointer;
@@ -179,7 +180,10 @@ nav button.navbar-toggler span {
   transition: width 0.3s ease;
 }
 .navbar .navbar-nav .nav-link:hover {
-  color: var(--primary-color) !important;
+  color: var(--zano-pink) !important;
+}
+.navbar .navbar-nav .nav-link.active {
+  color: var(--zano-pink) !important;
 }
 .navbar .navbar-nav .nav-link.sign-in-link::after,
 .navbar .navbar-nav .nav-link.signup-link::after {
@@ -197,27 +201,14 @@ nav button.navbar-toggler span {
   position: absolute;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, var(--yellow-color) 0%, #fbecc6 100%);
+  background: linear-gradient(to right, var(--yellow-color) 0%, var(--zano-pink) 100%);
   left: 0;
   bottom: 0;
   transition: width 0.3s ease;
-}
-.navbar .navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(to right, var(--yellow-color) 0%, #fbecc6 100%);
-  left: 0;
-  bottom: 0;
-  transition: width 0.3s ease;
-}
-.navbar .navbar-nav .nav-link:hover::after {
-  width: 100%;
 }
 
-.navbar .navbar-nav .nav-link.active {
-  color: #007bff;
+.navbar .navbar-nav .nav-link:hover::after {
+  width: 100%;
 }
 
 .navbar .navbar-nav .nav-link.active::after {
@@ -284,10 +275,15 @@ nav button.navbar-toggler span {
   transition: all .4s ease;
   background-image: linear-gradient(to right, #fff 0%, transparent 100%);
 }
-.dropdown-item:focus .dropdown-item:hover {
-  color:  var(--yellow-color);
+.dropdown-item:focus, .dropdown-item:hover {
+  color:  var(--zano-pink);
   background-image: linear-gradient(to right, #fff 99%, rgba(255, 255, 255, .9));
 }
+.dropdown-item.active {
+  background: linear-gradient(90deg, var(--lite-yellow), #F8DFA0) !important;
+  color: var(--primary-color) !important;
+}
+
 .dropdown-divider {
   height: 0;
   margin: .1rem 0;
@@ -394,7 +390,7 @@ nav button.navbar-toggler span {
   margin-bottom: 0;
 }
 .canvas-menu .vertical-menu li.openmenu>a {
-  color: #5280c1;
+  color: var(--zano-pink) !important;
 }
 .canvas-menu .vertical-menu li.openmenu .switch {
   transform: rotate(180deg);
@@ -406,8 +402,8 @@ nav button.navbar-toggler span {
   transition: all .3s ease;
 }
 .canvas-menu .vertical-menu li a {
-  color: #5280c1;
-  font-family: 'Nunito', sans-serif;
+  color: var(--yellow-color);
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
@@ -424,13 +420,13 @@ nav button.navbar-toggler span {
   background: linear-gradient(to right, #ebebeb 0%, transparent 100%);
 }
 .canvas-menu .vertical-menu li.active a {
-  color: var(--yellow-color);
+  color: var(--zano-pink);
 }
 .canvas-menu .vertical-menu li.active .submenu a {
   color: #79889e;
 }
 .vertical-menu .vertical-menu li.active .submenu a:hover {
-  color: #5280c1;
+  color: var(--zano-pink);
 }
 .canvas-menu .submenu {
   display: none;
@@ -476,7 +472,7 @@ nav button.navbar-toggler span {
 .app-store-links {
   display: flex;
   gap: 1rem;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--zano-pink);
   border-radius: 50px;
   padding: 4px 1rem;
   align-items: center;
@@ -486,9 +482,14 @@ nav button.navbar-toggler span {
 }
 .app-store-links a i {
   font-size: 2rem;
+  color: var(--zano-pink) !important;
+}
+.app-store-links a:hover i {
   color: var(--yellow-color) !important;
 }
-
+.app-store-links p {
+  color: var(--zano-pink);
+}
 #hero .hero-img {
   margin-top: 1rem;
   position: relative;
@@ -526,6 +527,7 @@ nav button.navbar-toggler span {
   font-size: 16px;
   font-weight: 400;
   color: var(--primary-color) !important;
+  text-transform: uppercase;
 }
 .debit-card header .chip {
   width: 60px;
@@ -534,14 +536,18 @@ nav button.navbar-toggler span {
   font-size: 10px;
   font-weight: 400;
   color: var(--primary-color) !important;
+  text-transform: uppercase;
 }
 .debit-card h5.number {
   margin-top: 4px;
   font-size: 18px;
   letter-spacing: 1px;
+  color: var(--zano-pink) !important;
 }
 .debit-card h5.name {
   margin-top: 20px;
+  color: var(--zano-pink) !important;
+  text-transform: uppercase;
 }
 .debit-card .card-details {
   margin-top: 30px;
@@ -557,7 +563,7 @@ nav button.navbar-toggler span {
   text-align: center;
 }
 #open-account .open-account-card {
-  background: var(--yellow-color);
+  background: linear-gradient(to right, var(--yellow-color) 0%, var(--zano-pink) 100%);
   border-radius: 25px;
   margin-top: 4rem;
   color: var(--off-white);
@@ -655,7 +661,7 @@ nav button.navbar-toggler span {
   max-width: 420px;
   height: 420px;
   border-radius: 25px;
-  background: var(--yellow-color);
+  background: linear-gradient(to right, var(--yellow-color) 0%, var(--zano-pink) 100%);
   margin: 4rem 0;
 }
 .grid-box-text {
