@@ -47,10 +47,12 @@
 </nav>
 
 <div class="canvas-menu d-flex align-items-end flex-column" [class.open]="isCanvasMenuOpen">
-  <button class="btn-close" aria-label="close" type="button" (click)="toggleCanvasMenu()"></button>
+  <button class="btn-cloze" aria-label="close" type="button" (click)="toggleCanvasMenu()">
+    <i class="bi bi-x-lg"></i>
+  </button>
 
   <div class="logo">
-    <img [src]="['images/logo.png']" alt="logo" width="60">
+    <img [src]="['images/zano-circle-logo.png']" alt="logo" width="60">
   </div>
   <nav>
     <ul class="vertical-menu">
@@ -62,7 +64,7 @@
         </span>
         <ul class="submenu" *ngIf="item.submenu.length > 0" [style.display]="openSubmenuIndex === i ? 'block' : 'none'">
           <li class="" *ngFor="let subItem of item.submenu">
-            <a [routerLink]="subItem.url" class="" (click)="closeCanvasMenu()">{{ subItem.title }}</a>
+            <a [routerLink]="subItem.url" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" (click)="closeCanvasMenu()">{{ subItem.title }}</a>
           </li>
         </ul>
       </li>

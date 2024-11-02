@@ -28,7 +28,7 @@ body{
   /*  Colors */
   --yellow-color: #f0b114;
   --deep-sea-blue: #123456;
-  --primary-color: #000003;
+  --primary-color: #111111;
   --off-white: #f3f3f3;
   --lite-yellow: #FEF9EC;
   --zano-pink: #ff186b;
@@ -58,6 +58,7 @@ article {
 footer a {
   transition: color 0.3s ease;
 }
+
 footer a:hover {
   color: var(--zano-pink) !important;
 }
@@ -133,7 +134,7 @@ button {
   box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
   height: 80px;
   z-index: 999;
-  background: var(--lite-yellow);
+  background: var(--primary-color);
   padding-top: 0 !important;
 }
 .navbar .navbar-brand img {
@@ -159,7 +160,7 @@ nav button.navbar-toggler span {
   display: inline-block;
   padding: 5px 25px;
   font-size: 18px;
-  color: #333;
+  color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -225,7 +226,7 @@ nav button.navbar-toggler span {
   text-align-last: left;
   display: none;
   list-style: none;
-  background-color: #fff;
+  background-color: var(--primary-color);
   background-clip: padding-box;
   border: 0;
   border-radius: .25rem;
@@ -241,7 +242,7 @@ nav button.navbar-toggler span {
   left: 25%;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 10px solid #fff;
+  border-bottom: 10px solid var(--primary-color);
 }
 .dropdown-menu li {
   overflow: hidden;
@@ -333,7 +334,7 @@ nav button.navbar-toggler span {
 
 /********* Canvas menu **********/
 .canvas-menu {
-  background: var(--lite-yellow);
+  background: var(--primary-color);
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -354,32 +355,42 @@ nav button.navbar-toggler span {
 .canvas-menu.position-left {
   transform: translateX(0);
 }
-.canvas-menu .btn-close {
+.canvas-menu .btn-cloze {
   box-sizing: content-box;
-  width: 1em;
-  height: 1em;
+  width: 1.2em;
+  height: 1.2em;
   position: absolute;
   padding: .25em;
-  color: var(--yellow-color) !important;
-  opacity: .4;
   right: 30px;
   top: 20px;
   transition: all .3s ease-in-out;
+  background: transparent !important;
+  outline-color: transparent !important;
+  box-shadow: none !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
-.canvas-menu .btn-close:focus {
+.canvas-menu .btn-cloze i {
+  color: var(--yellow-color) !important;
+  font-size: 1.25rem !important;
+}
+.canvas-menu .btn-cloze:focus {
   outline: none;
   box-shadow: none;
 }
-.canvas-menu .btn-close:hover {
+.canvas-menu .btn-cloze:hover {
   opacity: 1;
 }
 .canvas-menu .logo {
   margin-bottom: 59px;
   margin-top: 50px;
-  width: 100px;
+  width: 60px;
 }
 .canvas-menu .logo img {
-  margin-left: -8.6rem;
+  margin-left: -10rem;
 }
 .canvas-menu nav {
   width: 100%;
@@ -402,7 +413,7 @@ nav button.navbar-toggler span {
   transition: all .3s ease;
 }
 .canvas-menu .vertical-menu li a {
-  color: var(--yellow-color);
+  color: var(--yellow-color) !important;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -417,7 +428,7 @@ nav button.navbar-toggler span {
   margin-top: 10px;
   width: 100%;
   background: #ebebeb;
-  background: linear-gradient(to right, #ebebeb 0%, transparent 100%);
+  background: linear-gradient(to right, #333333 0%, transparent 100%);
 }
 .canvas-menu .vertical-menu li.active a {
   color: var(--zano-pink);
@@ -425,8 +436,11 @@ nav button.navbar-toggler span {
 .canvas-menu .vertical-menu li.active .submenu a {
   color: #79889e;
 }
-.vertical-menu .vertical-menu li.active .submenu a:hover {
+.vertical-menu .submenu a:hover {
   color: var(--zano-pink);
+}
+.vertical-menu li a.active {
+  color: var(--zano-pink) !important;
 }
 .canvas-menu .submenu {
   display: none;
@@ -453,6 +467,9 @@ nav button.navbar-toggler span {
   right: 0;
   transform: rotate(0deg);
   transition: all .2s ease-in-out;
+}
+.canvas-menu .social-icons li a {
+  color: var(--zano-pink) !important;
 }
 #hero {
   background: var(--lite-yellow);
@@ -499,7 +516,7 @@ nav button.navbar-toggler span {
 /* Card styling */
 #hero .hero-img .debit-card {
   position: absolute;
-  background: rgba( 255, 255, 255, 0.3 );
+  background: linear-gradient(71deg, #080509, #1a171c, #080509);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 8px );
   -webkit-backdrop-filter: blur( 8px );
@@ -526,7 +543,7 @@ nav button.navbar-toggler span {
 .debit-card h5 {
   font-size: 16px;
   font-weight: 400;
-  color: var(--primary-color) !important;
+  color: var(--off-white) !important;
   text-transform: uppercase;
 }
 .debit-card header .chip {
@@ -535,7 +552,7 @@ nav button.navbar-toggler span {
 .debit-card h6 {
   font-size: 10px;
   font-weight: 400;
-  color: var(--primary-color) !important;
+  color: var(--off-white) !important;
   text-transform: uppercase;
 }
 .debit-card h5.number {
