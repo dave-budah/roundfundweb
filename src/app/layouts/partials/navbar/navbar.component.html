@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/home']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          <a class="nav-link" [routerLink]="['home']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle">Ecosystem
@@ -56,7 +56,7 @@
   </div>
   <nav>
     <ul class="vertical-menu">
-      <li class=""><a [routerLink]="['/home']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="" (click)="closeCanvasMenu()">Home</a></li>
+      <li class=""><a [routerLink]="['home']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="" (click)="closeCanvasMenu()">Home</a></li>
       <li *ngFor="let item of menuItems; let i = index" [class.openmenu]="openSubmenuIndex === i">
         <a href="#" class="">{{ item.title }}</a>
         <span class="switch" (click)="toggleSubmenu(i)">
