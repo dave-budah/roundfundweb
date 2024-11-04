@@ -17,7 +17,7 @@ export class ContactComponent {
   toastr = inject(ToastrService)
 
   contactForm = this.formBuilder.group({
-    subject: this.formBuilder.control('Email from Round Money website'),
+    subject: this.formBuilder.control('Email from Zano website'),
     name: this.formBuilder.control('', [Validators.required]),
     email: this.formBuilder.control('', [Validators.required]),
     message: this.formBuilder.control('', [Validators.required]),
@@ -41,11 +41,11 @@ export class ContactComponent {
       this.http.post('https://sendmail-rfetf4jfgq-uc.a.run.app/', formData, { headers })
         .subscribe({
           next: () => {
-            this.toastr.success('Form submitted successfully:')
+            this.toastr.success('Message submitted successfully:')
             this.contactForm.reset()
           },
           error: (error) => {
-            this.toastr.error('Error submitting form:', error.message)
+            this.toastr.error('Error submitting message:', error.message)
           },
         });
     }
