@@ -1,1 +1,0 @@
-import{Y as n,eb as o,fb as s,qb as i,ub as a}from"./chunk-6BMDLSP3.js";var m=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["terms-conditions"]],standalone:!0,features:[a],decls:2,vars:0,template:function(e,c){e&1&&(o(0,"p"),i(1,"terms-conditions works!"),s())},encapsulation:2})};export{m as TermsConditionsComponent};
