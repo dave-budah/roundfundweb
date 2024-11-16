@@ -62,6 +62,11 @@ footer a {
 footer a:hover {
   color: var(--zano-pink) !important;
 }
+.legal-notice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .section-padding {
   padding: 4rem 0;
 }
