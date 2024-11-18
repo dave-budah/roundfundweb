@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "roundfundweb": {
+    "zano": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "roundfundweb:build:production"
+              "buildTarget": "zano:build:production"
             },
             "development": {
-              "buildTarget": "roundfundweb:build:development"
+              "buildTarget": "zano:build:development"
             }
           },
           "defaultConfiguration": "development"

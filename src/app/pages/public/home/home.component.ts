@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, HostListener, inject, OnInit, Renderer2} from '@angular/core';
+import {AfterViewInit, Component, inject} from '@angular/core';
 
 @Component({
   selector: 'home',

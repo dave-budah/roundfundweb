@@ -32,7 +32,13 @@ body{
   --off-white: #f3f3f3;
   --lite-yellow: #FEF9EC;
   --zano-pink: #ff186b;
+
+  --scroll-offset: 100px;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 svg {
   fill: var(--zano-pink) !important;
 }
@@ -55,6 +61,7 @@ section,
 article {
   container-type: inline-size;
 }
+
 footer a {
   transition: color 0.3s ease;
 }
