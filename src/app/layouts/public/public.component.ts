@@ -14,7 +14,7 @@ import {FooterComponent} from "../partials/footer/footer.component";
   template: `
     <navbar></navbar>
     <router-outlet></router-outlet>
-    <app-footer></app-footer>
+<!--    <app-footer></app-footer>-->
   `,
   styles: `
   `
